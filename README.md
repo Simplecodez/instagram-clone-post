@@ -1,32 +1,20 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
-
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+# Simple Instagram clone
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+This is an overly simplistic application showing basic CRUD operations using Nestjs, GraphQL and TypeORM.
+Nestjs is a Node.js framework built on top of Express.js. Its makes writing modular and maintainable codes easy.
+The GraphQL is a query language used as a substitute to the traditional REST APIs. It gets you exactly what you requested for without over fetching. TypeORM is an ORM that maps tables to models. It abstracts the database connection layer, tables and column creation.
+
 
 ## Installation
+Please before you continue, ensure you have Nodejs install on your PC. If you don't have it, please visit [Download Nodejs](https://nodejs.org/en/download/package-manager) for the installation process.
+Now, clone the repo:
+
+```bash
+$ git clone https://github.com/Simplecodez/instagram-clone-post
+```
+Now run: "npm install" to install all the dependencies of the project.
 
 ```bash
 $ npm install
@@ -34,29 +22,30 @@ $ npm install
 
 ## Running the app
 
-```bash
-# development
-$ npm run start
+For the database, PostgresQL image on docker was used for simplicity. Please ensure that you have Docker installed.
+To install docker, visit: [Docker](https://docs.docker.com/get-docker/) to download. Please make ensure that Docker daemon is running before you run this command:
 
+```bash
+$ docker compose up
+```
+This will download  PostgresQL and Adminer images and fire up two services; a PostgresQL database on port: 5432 and Adminer, a database management tool accessible on localhost:8080.
+
+Now run: 
+```bash
 # watch mode
 $ npm run start:dev
+```
+This will start the App, conmect to the database and populate the Post and User entities with dummy test data 
 
-# production mode
-$ npm run start:prod
+##Usage
+Once the service is started, visit the Graphql playground on your browser: localhost:3000/graphql to test and use the application. 
+It contains documents on the various endpoints.
+I implemented a very simple authentication for accessing the endpoints to make it a bit real life and so the post can be associated with a user.
+The authentication can be easily deactivated by removing the:
+```
+@UseGuards(AuthGuard) in the PostResolver call
 ```
 
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
 
 ## Support
 
