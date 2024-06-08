@@ -48,7 +48,10 @@ After that, run the application using:
 # watch mode
 $ npm run start:dev
 ```
-This will start the App, conmect to the database and populate the Post and User entities with dummy test data 
+Please see: 
+```
+src/seed-data/loadupdata  for instructions on how to load up the dummy data
+```
 
 ## Usage
 Once the service is started, visit the Graphql playground on your browser:
