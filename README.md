@@ -3,8 +3,8 @@
 ## Description
 
 This is an overly simplistic application showing basic CRUD operations using Nestjs, GraphQL and TypeORM.
-Nestjs is a Node.js framework built on top of Express.js. Its makes writing modular and maintainable codes easy.
-The GraphQL is a query language used as a substitute to the traditional REST APIs. It gets you exactly what you requested for without over fetching. TypeORM is an ORM that maps tables to models. It abstracts the database connection layer, tables and column creation.
+Nestjs is a Nodejs framework built on top of Express.js. It makes writing modular and maintainable codes easy.
+The GraphQL is a query language used as a substitute to traditional REST APIs. It gets you exactly what you requested for without over fetching. TypeORM is an ORM package that maps tables to models. It abstracts the database connection layer, tables and column creation.
 
 
 ## Installation
@@ -14,7 +14,7 @@ Now, clone the repo:
 ```bash
 $ git clone https://github.com/Simplecodez/instagram-clone-post
 ```
-Now run: "npm install" to install all the dependencies of the project.
+After that, run: "npm install" to install all the dependencies of the project.
 
 ```bash
 $ npm install
@@ -28,9 +28,22 @@ To install docker, visit: [Docker](https://docs.docker.com/get-docker/) to downl
 ```bash
 $ docker compose up
 ```
-This will download  PostgresQL and Adminer images and fire up two services; a PostgresQL database on port: 5432 and Adminer, a database management tool accessible on localhost:8080.
+This will download  PostgresQL and Adminer images and fire up two services; a PostgresQL database on port: 5432 and Adminer, a database management tool accessible on,
 
-Now run: 
+```
+localhost:8080
+```
+You will be prompted to enter your username and password of the database
+Please use:
+
+```
+database: select PostgresQL 
+username: postgres
+password: postgres
+```
+and log in.
+
+After that, run the application using:
 ```bash
 # watch mode
 $ npm run start:dev
@@ -45,4 +58,6 @@ The authentication can be easily deactivated by removing the:
 ```
 @UseGuards(AuthGuard) in the PostResolver call
 ```
+## Licence 
+MIT
 
