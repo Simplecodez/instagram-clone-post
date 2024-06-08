@@ -5,8 +5,7 @@ export const userSeeds = [
     email: 'john.doe@example.com',
     password: 'password123',
     isDeleted: false,
-    createdAt: '2024-06-10T08:00:00Z',
-    posts: []
+    createdAt: '2024-06-10T08:00:00Z'
   },
   {
     firstName: 'Jane',
@@ -14,8 +13,7 @@ export const userSeeds = [
     email: 'jane.smith@example.com',
     password: 'password456',
     isDeleted: false,
-    createdAt: '2024-06-10T08:00:00Z',
-    posts: []
+    createdAt: '2024-06-10T08:00:00Z'
   },
   {
     firstName: 'Alice',
@@ -23,8 +21,7 @@ export const userSeeds = [
     email: 'alice.johnson@example.com',
     password: 'password789',
     isDeleted: false,
-    createdAt: '2024-06-10T08:00:00Z',
-    posts: []
+    createdAt: '2024-06-10T08:00:00Z'
   },
   {
     firstName: 'Bob',
@@ -32,8 +29,7 @@ export const userSeeds = [
     email: 'bob.brown@example.com',
     password: 'passwordabc',
     isDeleted: false,
-    createdAt: '2024-06-10T08:00:00Z',
-    posts: []
+    createdAt: '2024-06-10T08:00:00Z'
   },
   {
     firstName: 'Emily',
@@ -41,7 +37,6 @@ export const userSeeds = [
     email: 'emily.davis@example.com',
     password: 'passworddef',
     isDeleted: false,
-    createdAt: '2024-06-10T08:00:00Z',
-    posts: []
+    createdAt: '2024-06-10T08:00:00Z'
   }
 ];
