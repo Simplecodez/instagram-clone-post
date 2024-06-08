@@ -15,11 +15,7 @@ export class Seed {
 
   async saveUsersFromFile() {
     try {
-      for (let i = 0; i <= 4; i++) {
-        await this.userService.create(userSeeds[i]);
-        await this.postService.create(postsSeeds[i] as any, i + 1);
-      }
-
+       await Promise.all([userSeeds.map((user) => this.userService.create(user))]);
       console.log('Users saved successfully.');
     } catch (error) {
       console.error('Error saving users:', error);
