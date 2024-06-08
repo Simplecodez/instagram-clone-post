@@ -8,10 +8,7 @@ export const postsSeeds = [
     },
     music: 'Chill vibes',
     audience: 'PUBLIC',
-    images: ['image1.jpg', 'image2.jpg', 'image3.jpg'],
-    isDeleted: false,
-    createdAt: '2024-06-10T08:00:00Z',
-    updatedAt: '2024-06-10T08:15:00Z'
+    images: ['image1.jpg', 'image2.jpg', 'image3.jpg']
   },
   {
     id: 2,
@@ -22,10 +19,7 @@ export const postsSeeds = [
     },
     music: 'Urban beats',
     audience: 'FRIENDS',
-    images: ['image4.jpg', 'image5.jpg', 'image6.jpg'],
-    isDeleted: false,
-    createdAt: '2024-06-11T10:00:00Z',
-    updatedAt: '2024-06-11T10:20:00Z'
+    images: ['image4.jpg', 'image5.jpg', 'image6.jpg']
   },
   {
     id: 3,
@@ -36,10 +30,7 @@ export const postsSeeds = [
     },
     music: 'Nature sounds',
     audience: 'PRIVATE',
-    images: ['image7.jpg', 'image8.jpg', 'image9.jpg'],
-    isDeleted: false,
-    createdAt: '2024-06-12T12:00:00Z',
-    updatedAt: '2024-06-12T12:30:00Z'
+    images: ['image7.jpg', 'image8.jpg', 'image9.jpg']
   },
   {
     id: 4,
@@ -50,10 +41,7 @@ export const postsSeeds = [
     },
     music: 'Relaxing melodies',
     audience: 'PUBLIC',
-    images: ['image10.jpg', 'image11.jpg', 'image12.jpg'],
-    isDeleted: false,
-    createdAt: '2024-06-13T09:00:00Z',
-    updatedAt: '2024-06-13T09:25:00Z'
+    images: ['image10.jpg', 'image11.jpg', 'image12.jpg']
   },
   {
     id: 5,
@@ -64,9 +52,6 @@ export const postsSeeds = [
     },
     music: 'Upbeat tunes',
     audience: 'FAMILY',
-    images: ['image13.jpg', 'image14.jpg', 'image15.jpg'],
-    isDeleted: false,
-    createdAt: '2024-06-14T15:00:00Z',
-    updatedAt: '2024-06-14T15:30:00Z'
+    images: ['image13.jpg', 'image14.jpg', 'image15.jpg']
   }
 ];
