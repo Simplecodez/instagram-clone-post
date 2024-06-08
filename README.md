@@ -60,7 +60,7 @@ It contains documentation on the various endpoints.
 I implemented a very simple authentication for accessing the endpoints to make it a bit real life and so the post can be associated with a user.
 The authentication can be easily deactivated by removing the:
 ```
-@UseGuards(AuthGuard) in the PostResolver call
+@UseGuards(AuthGuard) in the PostResolver class
 ```
 ## Licence 
 MIT
