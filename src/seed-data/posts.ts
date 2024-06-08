@@ -1,6 +1,5 @@
 export const postsSeeds = [
   {
-    id: 1,
     caption: 'Beautiful sunset at the beach',
     location: {
       lat: 37.7749,
@@ -11,7 +10,6 @@ export const postsSeeds = [
     images: ['image1.jpg', 'image2.jpg', 'image3.jpg']
   },
   {
-    id: 2,
     caption: 'Exploring the city streets',
     location: {
       lat: 40.7128,
@@ -22,7 +20,6 @@ export const postsSeeds = [
     images: ['image4.jpg', 'image5.jpg', 'image6.jpg']
   },
   {
-    id: 3,
     caption: 'Hiking in the mountains',
     location: {
       lat: 34.0522,
@@ -33,7 +30,6 @@ export const postsSeeds = [
     images: ['image7.jpg', 'image8.jpg', 'image9.jpg']
   },
   {
-    id: 4,
     caption: 'Morning coffee with a view',
     location: {
       lat: 51.5074,
@@ -44,7 +40,6 @@ export const postsSeeds = [
     images: ['image10.jpg', 'image11.jpg', 'image12.jpg']
   },
   {
-    id: 5,
     caption: 'Family barbecue in the backyard',
     location: {
       lat: 34.0522,
