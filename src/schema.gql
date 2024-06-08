@@ -1,0 +1,112 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Coordinate {
+  lat: Float!
+  lng: Float!
+}
+
+type User {
+  id: Int!
+  firstName: String!
+  lastName: String!
+  email: String!
+  password: String!
+  isDeleted: Boolean!
+  createdAt: DateTime!
+  posts: [Post!]!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Post {
+  id: Int!
+  caption: String
+  userId: User!
+  location: Coordinate
+  music: String
+  audience: Audience
+  images: [String!]!
+  isDeleted: Boolean!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+"""The audience type for the post"""
+enum Audience {
+  PUBLIC
+  FRIENDS
+  PRIVATE
+}
+
+type PostResponse {
+  status: String!
+  post: Post
+}
+
+type PostsResponse {
+  status: String!
+  posts: [Post!]
+}
+
+type DeletePostsResponse {
+  status: String!
+}
+
+type SigninResponse {
+  status: String!
+  user: User!
+  token: String!
+}
+
+type CreateUserResponse {
+  status: String!
+  user: User!
+}
+
+type Query {
+  getPostById(id: Int!): PostResponse
+  getAllPosts: PostsResponse
+  getUserPosts: PostsResponse
+  getMe: User
+  getAllUsers: [User!]
+}
+
+type Mutation {
+  createPost(CreatePostInput: CreatePostInput!): PostResponse!
+  updatePost(id: Int!, UpdatePostInput: UpdatePostInput!): PostResponse
+  deletePost(id: Int!): DeletePostsResponse
+  deleteUser(id: Int!): User
+  signIn(email: String!, password: String!): SigninResponse
+  register(createUserInput: CreateUserInput!): CreateUserResponse
+}
+
+input CreatePostInput {
+  caption: String
+  location: CoordinateInput
+  music: String
+  audience: String
+  images: [String!]!
+}
+
+input CoordinateInput {
+  lat: Float!
+  lng: Float!
+}
+
+input UpdatePostInput {
+  caption: String
+  location: CoordinateInput
+  audience: String
+}
+
+input CreateUserInput {
+  firstName: String!
+  lastName: String!
+  email: String!
+  password: String!
+}
