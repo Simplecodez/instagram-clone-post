@@ -37,7 +37,7 @@ $ npm run start:dev
 ```
 This will start the App, conmect to the database and populate the Post and User entities with dummy test data 
 
-##Usage
+## Usage
 Once the service is started, visit the Graphql playground on your browser: localhost:3000/graphql to test and use the application. 
 It contains documents on the various endpoints.
 I implemented a very simple authentication for accessing the endpoints to make it a bit real life and so the post can be associated with a user.
