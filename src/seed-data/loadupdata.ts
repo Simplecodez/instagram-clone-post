@@ -19,12 +19,12 @@ export class Seed {
      // After seeding, they should be commented out to prevent db errors
        await Promise.all(userSeeds.map((user) => this.userService.create(user)));
       // This can be uncommented to add post for each of the users.
-      //  await Promise.all([
+      //  await Promise.all(
       //   postsSeeds.map((post, i) => {
       //     console.log(i);
       //     return this.postService.create(post as any, i + 1);
       //   })
-      // ]);
+      // );
       console.log('Users saved successfully.');
     } catch (error) {
       console.error('Error saving users:', error);
