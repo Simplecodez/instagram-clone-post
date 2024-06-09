@@ -17,7 +17,7 @@ export class Seed {
     try {
       // Seed the users first, comment out the user seeding, and seed posts to prevent db duplicate errors.
      // After seeding, they should be commented out to prevent db errors
-       await Promise.all([userSeeds.map((user) => this.userService.create(user))]);
+       await Promise.all(userSeeds.map((user) => this.userService.create(user)));
       // This can be uncommented to add post for each of the users.
       //  await Promise.all([
       //   postsSeeds.map((post, i) => {
